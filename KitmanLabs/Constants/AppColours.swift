@@ -8,10 +8,11 @@
 import SwiftUI
 
 // MARK: - AppColours
+
 enum AppColours {
     public static let gradient: LinearGradient = .init(colors: [
         .init(hex: "#4b6cb7"),
-        .init(hex: "#182848")
+        .init(hex: "#182848"),
     ],
     startPoint: .topLeading,
     endPoint: .bottomTrailing)
@@ -24,7 +25,7 @@ enum AppColours {
     endPoint: .bottomTrailing)
 
     public static let secondary: LinearGradient = .init(colors: [
-        .secondary
+        .secondary,
     ],
     startPoint: .topLeading,
     endPoint: .bottomTrailing)

@@ -8,27 +8,31 @@
 import SwiftUI
 
 // MARK: - LoginView
+
 struct LoginView: View {
-    @StateObject private var loginService = LoginService()
-    @State private var userName: String = .empty
-    @State private var password: String = .empty
+    @StateObject private var loginVM = LoginViewModel()
     @FocusState private var focusedField: Textfields?
+
     var body: some View {
-        VStack {
-            GrayTextField(text: $userName,
+        VStack(spacing: 10) {
+            GrayTextField(text: $loginVM.userName,
                           title: "Username",
                           hint: "Please enter your username",
-                          isFocused: focusedField == .userName)
+                          isFocused: focusedField == .userName,
+                          hasError: loginVM.hasUsernameError,
+                          errorText: "Please enter a valid username")
                 .tag(Textfields.userName)
                 .onTapGesture {
                     focusedField = .userName
                 }
                 .focused($focusedField, equals: .userName)
-            GrayTextField(text: $password,
+            GrayTextField(text: $loginVM.password,
                           title: "Password",
                           hint: "Please enter your password",
                           isSecure: true,
-                          isFocused: focusedField == .password)
+                          isFocused: focusedField == .password,
+                          hasError: loginVM.hasPasswordError,
+                          errorText: "Please enter a valid password")
                 .tag(Textfields.password)
                 .onTapGesture {
                     focusedField = .password
@@ -37,13 +41,24 @@ struct LoginView: View {
 
             Button("Login") {
                 focusedField = .none
-                performLogin()
+                Task {
+                    await loginVM.performLogin()
+                }
             }
+            .buttonStyle(.borderedProminent)
             .foregroundColor(.white)
+            .backgroundStyle(AppColours.gradient)
             .frame(maxWidth: .infinity)
             .frame(height: 50)
-            .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
-                .fill(AppColours.gradient))
+        }
+        .loadingOverlay(isShowing: $loginVM.isLoading, text: "Logging you in")
+        .alert("Whoops!\nsomething went wrong",
+               isPresented: $loginVM.hasGeneralError) {
+            Button {
+                loginVM.hasGeneralError = false
+            } label: {
+                Text("Please try again later")
+            }
         }
         .padding()
         .onAppear {
@@ -52,19 +67,8 @@ struct LoginView: View {
     }
 }
 
-private extension LoginView {
-    func performLogin() {
-        Task(priority: .userInitiated) {
-            do {
-                try await loginService.logIn(with: userName, and: password)
-            } catch {
-                print("Failed to log in with error: \(error.localizedDescription)")
-            }
-        }
-    }
-}
-
 // MARK: - LoginView_Previews
+
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
@@ -72,6 +76,7 @@ struct LoginView_Previews: PreviewProvider {
 }
 
 // MARK: - LoginView.Textfields
+
 extension LoginView {
     private enum Textfields: Hashable {
         case userName

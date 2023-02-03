@@ -8,6 +8,7 @@
 import SwiftUI
 
 // MARK: - GrayTextField
+
 /// This is a view I have created for a personal project that I feel like can be used here
 struct GrayTextField: View {
     @Binding var text: String
@@ -32,7 +33,7 @@ struct GrayTextField: View {
         isFocused ? selectedColor : AppColours.secondary
     }
 
-    private var textShouldBeUp : Bool {
+    private var textShouldBeUp: Bool {
         if isFocused {
             return true
         } else {
@@ -92,7 +93,7 @@ struct GrayTextField: View {
                     .padding(.bottom, hasError ? 17 : 0)
                     .offset(y: textShouldBeUp ? -25 : 0)
                     .padding(.horizontal, 15)
-                    .foregroundStyle(hasError ? AppColours.errorGradient: accentColor)
+                    .foregroundStyle(hasError ? AppColours.errorGradient : accentColor)
                     .accessibilityHidden(true)
             }
             .animation(.easeInOut, value: isSecureState)
@@ -102,6 +103,7 @@ struct GrayTextField: View {
 }
 
 // MARK: - GrayTextField_Previews
+
 struct GrayTextField_Previews: PreviewProvider {
     static var previews: some View {
         VStack {

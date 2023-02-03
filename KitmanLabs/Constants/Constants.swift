@@ -10,7 +10,7 @@ import Foundation
 /// or provided to the app in a different way. While these are not secret, we might want to hide them for whatever reason.
 struct Constants {
     static let baseURL = "https://kml-tech-test.glitch.me"
-    
+
     enum Paths: String {
         case login = "/session"
     }

@@ -12,7 +12,6 @@
 		050F1985298D0497007D96FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 050F1984298D0497007D96FA /* Assets.xcassets */; };
 		050F1988298D0497007D96FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 050F1987298D0497007D96FA /* Preview Assets.xcassets */; };
 		050F1992298D0498007D96FA /* KitmanLabsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F1991298D0498007D96FA /* KitmanLabsTests.swift */; };
-		050F19AB298D04D6007D96FA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19AA298D04D6007D96FA /* LoginService.swift */; };
 		050F19AD298D0501007D96FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19AC298D0501007D96FA /* Constants.swift */; };
 		050F19AF298D0703007D96FA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19AE298D0703007D96FA /* String+Extensions.swift */; };
 		050F19B1298D0763007D96FA /* GrayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19B0298D0763007D96FA /* GrayTextField.swift */; };
@@ -20,6 +19,8 @@
 		050F19BA298D087E007D96FA /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19B9298D087E007D96FA /* Color+Extensions.swift */; };
 		050F19BE298D0CAF007D96FA /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19BD298D0CAF007D96FA /* LoginResponse.swift */; };
 		050F19C0298D0D81007D96FA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19BF298D0D81007D96FA /* NetworkService.swift */; };
+		050F19C4298D2827007D96FA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19C3298D2827007D96FA /* LoginViewModel.swift */; };
+		050F19C6298D28EB007D96FA /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19C5298D28EB007D96FA /* LoadingOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		050F1987298D0497007D96FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		050F198D298D0498007D96FA /* KitmanLabsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitmanLabsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		050F1991298D0498007D96FA /* KitmanLabsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitmanLabsTests.swift; sourceTree = "<group>"; };
-		050F19AA298D04D6007D96FA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		050F19AC298D0501007D96FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		050F19AE298D0703007D96FA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		050F19B0298D0763007D96FA /* GrayTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrayTextField.swift; sourceTree = "<group>"; };
@@ -48,6 +48,8 @@
 		050F19B9298D087E007D96FA /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		050F19BD298D0CAF007D96FA /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		050F19BF298D0D81007D96FA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		050F19C3298D2827007D96FA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		050F19C5298D28EB007D96FA /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				050F19B0298D0763007D96FA /* GrayTextField.swift */,
+				050F19C5298D28EB007D96FA /* LoadingOverlay.swift */,
 			);
 			path = GlobalViews;
 			sourceTree = "<group>";
@@ -146,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				050F1982298D0496007D96FA /* LoginView.swift */,
-				050F19AA298D04D6007D96FA /* LoginService.swift */,
+				050F19C3298D2827007D96FA /* LoginViewModel.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -271,8 +274,9 @@
 			files = (
 				050F19AF298D0703007D96FA /* String+Extensions.swift in Sources */,
 				050F1983298D0496007D96FA /* LoginView.swift in Sources */,
+				050F19C4298D2827007D96FA /* LoginViewModel.swift in Sources */,
 				050F19BE298D0CAF007D96FA /* LoginResponse.swift in Sources */,
-				050F19AB298D04D6007D96FA /* LoginService.swift in Sources */,
+				050F19C6298D28EB007D96FA /* LoadingOverlay.swift in Sources */,
 				050F19BA298D087E007D96FA /* Color+Extensions.swift in Sources */,
 				050F19C0298D0D81007D96FA /* NetworkService.swift in Sources */,
 				050F1981298D0496007D96FA /* KitmanLabsApp.swift in Sources */,
@@ -351,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -405,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -482,7 +486,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7N5G6M4FZA;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = NoamEfergan.KitmanLabsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,7 +506,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7N5G6M4FZA;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = NoamEfergan.KitmanLabsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
