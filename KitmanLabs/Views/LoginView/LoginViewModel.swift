@@ -35,7 +35,6 @@ final class LoginViewModel: ObservableObject {
             isLoading = true
             hasPasswordError = false
             hasUsernameError = false
-            #warning("USING HARD CODED DATA")
             let response = try await networkService.perform(path: Constants.Paths.login.rawValue,
                                                             responseType: LoginResponse.self,
                                                             requestType: .POST,
