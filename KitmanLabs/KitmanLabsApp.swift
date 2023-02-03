@@ -11,7 +11,7 @@ import SwiftUI
 struct KitmanLabsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

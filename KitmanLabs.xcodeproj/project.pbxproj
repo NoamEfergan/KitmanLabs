@@ -8,23 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		050F1981298D0496007D96FA /* KitmanLabsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F1980298D0496007D96FA /* KitmanLabsApp.swift */; };
-		050F1983298D0496007D96FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F1982298D0496007D96FA /* ContentView.swift */; };
+		050F1983298D0496007D96FA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F1982298D0496007D96FA /* LoginView.swift */; };
 		050F1985298D0497007D96FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 050F1984298D0497007D96FA /* Assets.xcassets */; };
 		050F1988298D0497007D96FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 050F1987298D0497007D96FA /* Preview Assets.xcassets */; };
 		050F1992298D0498007D96FA /* KitmanLabsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F1991298D0498007D96FA /* KitmanLabsTests.swift */; };
-		050F199C298D0498007D96FA /* KitmanLabsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F199B298D0498007D96FA /* KitmanLabsUITests.swift */; };
-		050F199E298D0498007D96FA /* KitmanLabsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F199D298D0498007D96FA /* KitmanLabsUITestsLaunchTests.swift */; };
+		050F19AB298D04D6007D96FA /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19AA298D04D6007D96FA /* LoginService.swift */; };
+		050F19AD298D0501007D96FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19AC298D0501007D96FA /* Constants.swift */; };
+		050F19AF298D0703007D96FA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19AE298D0703007D96FA /* String+Extensions.swift */; };
+		050F19B1298D0763007D96FA /* GrayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19B0298D0763007D96FA /* GrayTextField.swift */; };
+		050F19B3298D080F007D96FA /* AppColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19B2298D080F007D96FA /* AppColours.swift */; };
+		050F19BA298D087E007D96FA /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19B9298D087E007D96FA /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		050F198E298D0498007D96FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 050F1975298D0496007D96FA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 050F197C298D0496007D96FA;
-			remoteInfo = KitmanLabs;
-		};
-		050F1998298D0498007D96FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 050F1975298D0496007D96FA /* Project object */;
 			proxyType = 1;
@@ -36,14 +33,17 @@
 /* Begin PBXFileReference section */
 		050F197D298D0496007D96FA /* KitmanLabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KitmanLabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		050F1980298D0496007D96FA /* KitmanLabsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitmanLabsApp.swift; sourceTree = "<group>"; };
-		050F1982298D0496007D96FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		050F1982298D0496007D96FA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		050F1984298D0497007D96FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		050F1987298D0497007D96FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		050F198D298D0498007D96FA /* KitmanLabsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitmanLabsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		050F1991298D0498007D96FA /* KitmanLabsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitmanLabsTests.swift; sourceTree = "<group>"; };
-		050F1997298D0498007D96FA /* KitmanLabsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitmanLabsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		050F199B298D0498007D96FA /* KitmanLabsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitmanLabsUITests.swift; sourceTree = "<group>"; };
-		050F199D298D0498007D96FA /* KitmanLabsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitmanLabsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		050F19AA298D04D6007D96FA /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		050F19AC298D0501007D96FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		050F19AE298D0703007D96FA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		050F19B0298D0763007D96FA /* GrayTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrayTextField.swift; sourceTree = "<group>"; };
+		050F19B2298D080F007D96FA /* AppColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColours.swift; sourceTree = "<group>"; };
+		050F19B9298D087E007D96FA /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +61,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		050F1994298D0498007D96FA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +69,6 @@
 			children = (
 				050F197F298D0496007D96FA /* KitmanLabs */,
 				050F1990298D0498007D96FA /* KitmanLabsTests */,
-				050F199A298D0498007D96FA /* KitmanLabsUITests */,
 				050F197E298D0496007D96FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +78,6 @@
 			children = (
 				050F197D298D0496007D96FA /* KitmanLabs.app */,
 				050F198D298D0498007D96FA /* KitmanLabsTests.xctest */,
-				050F1997298D0498007D96FA /* KitmanLabsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				050F1980298D0496007D96FA /* KitmanLabsApp.swift */,
-				050F1982298D0496007D96FA /* ContentView.swift */,
+				050F19B8298D0864007D96FA /* Views */,
 				050F1984298D0497007D96FA /* Assets.xcassets */,
 				050F1986298D0497007D96FA /* Preview Content */,
+				050F19B4298D0823007D96FA /* Extensions */,
+				050F19B5298D082F007D96FA /* Constants */,
 			);
 			path = KitmanLabs;
 			sourceTree = "<group>";
@@ -118,13 +111,48 @@
 			path = KitmanLabsTests;
 			sourceTree = "<group>";
 		};
-		050F199A298D0498007D96FA /* KitmanLabsUITests */ = {
+		050F19B4298D0823007D96FA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				050F199B298D0498007D96FA /* KitmanLabsUITests.swift */,
-				050F199D298D0498007D96FA /* KitmanLabsUITestsLaunchTests.swift */,
+				050F19AE298D0703007D96FA /* String+Extensions.swift */,
+				050F19B9298D087E007D96FA /* Color+Extensions.swift */,
 			);
-			path = KitmanLabsUITests;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		050F19B5298D082F007D96FA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				050F19AC298D0501007D96FA /* Constants.swift */,
+				050F19B2298D080F007D96FA /* AppColours.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		050F19B6298D083D007D96FA /* GlobalViews */ = {
+			isa = PBXGroup;
+			children = (
+				050F19B0298D0763007D96FA /* GrayTextField.swift */,
+			);
+			path = GlobalViews;
+			sourceTree = "<group>";
+		};
+		050F19B7298D085A007D96FA /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				050F1982298D0496007D96FA /* LoginView.swift */,
+				050F19AA298D04D6007D96FA /* LoginService.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		050F19B8298D0864007D96FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				050F19B6298D083D007D96FA /* GlobalViews */,
+				050F19B7298D085A007D96FA /* LoginView */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +193,6 @@
 			productReference = 050F198D298D0498007D96FA /* KitmanLabsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		050F1996298D0498007D96FA /* KitmanLabsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 050F19A7298D0498007D96FA /* Build configuration list for PBXNativeTarget "KitmanLabsUITests" */;
-			buildPhases = (
-				050F1993298D0498007D96FA /* Sources */,
-				050F1994298D0498007D96FA /* Frameworks */,
-				050F1995298D0498007D96FA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				050F1999298D0498007D96FA /* PBXTargetDependency */,
-			);
-			name = KitmanLabsUITests;
-			productName = KitmanLabsUITests;
-			productReference = 050F1997298D0498007D96FA /* KitmanLabsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +207,6 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					050F198C298D0498007D96FA = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 050F197C298D0496007D96FA;
-					};
-					050F1996298D0498007D96FA = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 050F197C298D0496007D96FA;
 					};
@@ -221,7 +227,6 @@
 			targets = (
 				050F197C298D0496007D96FA /* KitmanLabs */,
 				050F198C298D0498007D96FA /* KitmanLabsTests */,
-				050F1996298D0498007D96FA /* KitmanLabsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,13 +248,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		050F1995298D0498007D96FA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,8 +255,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				050F1983298D0496007D96FA /* ContentView.swift in Sources */,
+				050F19AF298D0703007D96FA /* String+Extensions.swift in Sources */,
+				050F1983298D0496007D96FA /* LoginView.swift in Sources */,
+				050F19AB298D04D6007D96FA /* LoginService.swift in Sources */,
+				050F19BA298D087E007D96FA /* Color+Extensions.swift in Sources */,
 				050F1981298D0496007D96FA /* KitmanLabsApp.swift in Sources */,
+				050F19B1298D0763007D96FA /* GrayTextField.swift in Sources */,
+				050F19AD298D0501007D96FA /* Constants.swift in Sources */,
+				050F19B3298D080F007D96FA /* AppColours.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,15 +274,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		050F1993298D0498007D96FA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				050F199E298D0498007D96FA /* KitmanLabsUITestsLaunchTests.swift in Sources */,
-				050F199C298D0498007D96FA /* KitmanLabsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +281,6 @@
 			isa = PBXTargetDependency;
 			target = 050F197C298D0496007D96FA /* KitmanLabs */;
 			targetProxy = 050F198E298D0498007D96FA /* PBXContainerItemProxy */;
-		};
-		050F1999298D0498007D96FA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 050F197C298D0496007D96FA /* KitmanLabs */;
-			targetProxy = 050F1998298D0498007D96FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -507,42 +497,6 @@
 			};
 			name = Release;
 		};
-		050F19A8298D0498007D96FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7N5G6M4FZA;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = NoamEfergan.KitmanLabsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KitmanLabs;
-			};
-			name = Debug;
-		};
-		050F19A9298D0498007D96FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7N5G6M4FZA;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = NoamEfergan.KitmanLabsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KitmanLabs;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,15 +523,6 @@
 			buildConfigurations = (
 				050F19A5298D0498007D96FA /* Debug */,
 				050F19A6298D0498007D96FA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		050F19A7298D0498007D96FA /* Build configuration list for PBXNativeTarget "KitmanLabsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				050F19A8298D0498007D96FA /* Debug */,
-				050F19A9298D0498007D96FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
