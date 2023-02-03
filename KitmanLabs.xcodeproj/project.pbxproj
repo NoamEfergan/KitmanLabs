@@ -18,6 +18,8 @@
 		050F19B1298D0763007D96FA /* GrayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19B0298D0763007D96FA /* GrayTextField.swift */; };
 		050F19B3298D080F007D96FA /* AppColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19B2298D080F007D96FA /* AppColours.swift */; };
 		050F19BA298D087E007D96FA /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19B9298D087E007D96FA /* Color+Extensions.swift */; };
+		050F19BE298D0CAF007D96FA /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19BD298D0CAF007D96FA /* LoginResponse.swift */; };
+		050F19C0298D0D81007D96FA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19BF298D0D81007D96FA /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		050F19B0298D0763007D96FA /* GrayTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrayTextField.swift; sourceTree = "<group>"; };
 		050F19B2298D080F007D96FA /* AppColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColours.swift; sourceTree = "<group>"; };
 		050F19B9298D087E007D96FA /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		050F19BD298D0CAF007D96FA /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		050F19BF298D0D81007D96FA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				050F1986298D0497007D96FA /* Preview Content */,
 				050F19B4298D0823007D96FA /* Extensions */,
 				050F19B5298D082F007D96FA /* Constants */,
+				050F19BF298D0D81007D96FA /* NetworkService.swift */,
 			);
 			path = KitmanLabs;
 			sourceTree = "<group>";
@@ -149,10 +154,19 @@
 		050F19B8298D0864007D96FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				050F19BC298D0CA5007D96FA /* Codables */,
 				050F19B6298D083D007D96FA /* GlobalViews */,
 				050F19B7298D085A007D96FA /* LoginView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		050F19BC298D0CA5007D96FA /* Codables */ = {
+			isa = PBXGroup;
+			children = (
+				050F19BD298D0CAF007D96FA /* LoginResponse.swift */,
+			);
+			path = Codables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +271,10 @@
 			files = (
 				050F19AF298D0703007D96FA /* String+Extensions.swift in Sources */,
 				050F1983298D0496007D96FA /* LoginView.swift in Sources */,
+				050F19BE298D0CAF007D96FA /* LoginResponse.swift in Sources */,
 				050F19AB298D04D6007D96FA /* LoginService.swift in Sources */,
 				050F19BA298D087E007D96FA /* Color+Extensions.swift in Sources */,
+				050F19C0298D0D81007D96FA /* NetworkService.swift in Sources */,
 				050F1981298D0496007D96FA /* KitmanLabsApp.swift in Sources */,
 				050F19B1298D0763007D96FA /* GrayTextField.swift in Sources */,
 				050F19AD298D0501007D96FA /* Constants.swift in Sources */,

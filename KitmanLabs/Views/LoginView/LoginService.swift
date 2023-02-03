@@ -10,6 +10,7 @@ import SwiftUI
 // MARK: - LoginService
 final class LoginService: ObservableObject {
     @Published var isLoading = false
+    let networkService = NetworkService()
 
     func logIn(with username: String, and password: String) async throws {
         /// Checking the user name and password are valid. according to the real life usage, we might need to validate
@@ -20,6 +21,12 @@ final class LoginService: ObservableObject {
         guard !password.isEmpty else {
             throw LoginError.invalidPassword
         }
+        #warning("HARD CODED STUFF")
+        let response = try await networkService.perform(path: Constants.Paths.login.rawValue,
+                                                        responseType: String.self,
+                                                        requestType: .POST,
+                                                        body: ["username": "sampleUsername",
+                                                               "password": "samplePassword"])
     }
 }
 

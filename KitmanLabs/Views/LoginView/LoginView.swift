@@ -27,28 +27,39 @@ struct LoginView: View {
             GrayTextField(text: $password,
                           title: "Password",
                           hint: "Please enter your password",
+                          isSecure: true,
                           isFocused: focusedField == .password)
                 .tag(Textfields.password)
                 .onTapGesture {
                     focusedField = .password
                 }
                 .focused($focusedField, equals: .password)
-            
+
             Button("Login") {
                 focusedField = .none
-                print("Noam: Here ✋")
+                performLogin()
             }
             .foregroundColor(.white)
             .frame(maxWidth: .infinity)
             .frame(height: 50)
             .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
                 .fill(AppColours.gradient))
-
-
         }
         .padding()
         .onAppear {
             focusedField = .userName
+        }
+    }
+}
+
+private extension LoginView {
+    func performLogin() {
+        Task(priority: .userInitiated) {
+            do {
+                try await loginService.logIn(with: userName, and: password)
+            } catch {
+                print("Failed to log in with error: \(error.localizedDescription)")
+            }
         }
     }
 }
