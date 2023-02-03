@@ -21,6 +21,12 @@
 		050F19C0298D0D81007D96FA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19BF298D0D81007D96FA /* NetworkService.swift */; };
 		050F19C4298D2827007D96FA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19C3298D2827007D96FA /* LoginViewModel.swift */; };
 		050F19C6298D28EB007D96FA /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19C5298D28EB007D96FA /* LoadingOverlay.swift */; };
+		050F19C8298D3913007D96FA /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19C7298D3913007D96FA /* UserDefaults+Extensions.swift */; };
+		050F19CA298D3A36007D96FA /* Squad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19C9298D3A36007D96FA /* Squad.swift */; };
+		050F19CC298D3A6B007D96FA /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19CB298D3A6B007D96FA /* Athlete.swift */; };
+		050F19D0298D3AC0007D96FA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19CF298D3AC0007D96FA /* MainView.swift */; };
+		050F19D3298D3AE6007D96FA /* MainViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19D2298D3AE6007D96FA /* MainViewVM.swift */; };
+		050F19D6298D3B30007D96FA /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19D5298D3B30007D96FA /* NavigationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,12 @@
 		050F19BF298D0D81007D96FA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		050F19C3298D2827007D96FA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		050F19C5298D28EB007D96FA /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		050F19C7298D3913007D96FA /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		050F19C9298D3A36007D96FA /* Squad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squad.swift; sourceTree = "<group>"; };
+		050F19CB298D3A6B007D96FA /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
+		050F19CF298D3AC0007D96FA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		050F19D2298D3AE6007D96FA /* MainViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewVM.swift; sourceTree = "<group>"; };
+		050F19D5298D3B30007D96FA /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,12 +104,13 @@
 			isa = PBXGroup;
 			children = (
 				050F1980298D0496007D96FA /* KitmanLabsApp.swift */,
+				050F19D4298D3B1E007D96FA /* Services */,
+				050F19BC298D0CA5007D96FA /* Codables */,
+				050F19B5298D082F007D96FA /* Constants */,
+				050F19B4298D0823007D96FA /* Extensions */,
 				050F19B8298D0864007D96FA /* Views */,
 				050F1984298D0497007D96FA /* Assets.xcassets */,
 				050F1986298D0497007D96FA /* Preview Content */,
-				050F19B4298D0823007D96FA /* Extensions */,
-				050F19B5298D082F007D96FA /* Constants */,
-				050F19BF298D0D81007D96FA /* NetworkService.swift */,
 			);
 			path = KitmanLabs;
 			sourceTree = "<group>";
@@ -123,6 +136,7 @@
 			children = (
 				050F19AE298D0703007D96FA /* String+Extensions.swift */,
 				050F19B9298D087E007D96FA /* Color+Extensions.swift */,
+				050F19C7298D3913007D96FA /* UserDefaults+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -157,9 +171,9 @@
 		050F19B8298D0864007D96FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				050F19BC298D0CA5007D96FA /* Codables */,
 				050F19B6298D083D007D96FA /* GlobalViews */,
 				050F19B7298D085A007D96FA /* LoginView */,
+				050F19D1298D3AC8007D96FA /* MainView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,8 +182,28 @@
 			isa = PBXGroup;
 			children = (
 				050F19BD298D0CAF007D96FA /* LoginResponse.swift */,
+				050F19C9298D3A36007D96FA /* Squad.swift */,
+				050F19CB298D3A6B007D96FA /* Athlete.swift */,
 			);
 			path = Codables;
+			sourceTree = "<group>";
+		};
+		050F19D1298D3AC8007D96FA /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				050F19CF298D3AC0007D96FA /* MainView.swift */,
+				050F19D2298D3AE6007D96FA /* MainViewVM.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		050F19D4298D3B1E007D96FA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				050F19BF298D0D81007D96FA /* NetworkService.swift */,
+				050F19D5298D3B30007D96FA /* NavigationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				050F19CA298D3A36007D96FA /* Squad.swift in Sources */,
+				050F19CC298D3A6B007D96FA /* Athlete.swift in Sources */,
 				050F19AF298D0703007D96FA /* String+Extensions.swift in Sources */,
 				050F1983298D0496007D96FA /* LoginView.swift in Sources */,
+				050F19D6298D3B30007D96FA /* NavigationService.swift in Sources */,
 				050F19C4298D2827007D96FA /* LoginViewModel.swift in Sources */,
 				050F19BE298D0CAF007D96FA /* LoginResponse.swift in Sources */,
 				050F19C6298D28EB007D96FA /* LoadingOverlay.swift in Sources */,
@@ -282,6 +319,9 @@
 				050F1981298D0496007D96FA /* KitmanLabsApp.swift in Sources */,
 				050F19B1298D0763007D96FA /* GrayTextField.swift in Sources */,
 				050F19AD298D0501007D96FA /* Constants.swift in Sources */,
+				050F19C8298D3913007D96FA /* UserDefaults+Extensions.swift in Sources */,
+				050F19D0298D3AC0007D96FA /* MainView.swift in Sources */,
+				050F19D3298D3AE6007D96FA /* MainViewVM.swift in Sources */,
 				050F19B3298D080F007D96FA /* AppColours.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct KitmanLabsApp: App {
+    @StateObject var navigationService = NavigationService()
     var body: some Scene {
         WindowGroup {
             LoginView()
+                .environmentObject(navigationService)
         }
     }
 }

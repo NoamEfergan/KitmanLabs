@@ -42,18 +42,9 @@ final class LoginViewModel: ObservableObject {
                                                                 "username": "sampleUsername",
                                                                 "password": "samplePassword",
                                                             ])
-            print(response)
+            UserDefaults.userName = response.username ?? "User"
         } catch {
-//            if let loginError = error as? LoginService.LoginError {
-//                switch loginError {
-//                case .invalidUsername:
-//                    hasUsernameError = true
-//                case .invalidPassword:
-//                    hasPasswordError = true
-//                case .noneFound:
-//                    hasGeneralError = true
-//                }
-//            }
+
             print("Failed to log in with error: \(error.localizedDescription)")
         }
     }
