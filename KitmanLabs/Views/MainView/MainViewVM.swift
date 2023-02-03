@@ -32,7 +32,7 @@ final class MainViewVM: ObservableObject {
         }
     }
     
-    private func matchAthletesWithSquads(_ athletes: [Athlete], _ squads: [Squad]) -> PresentableData {
+    func matchAthletesWithSquads(_ athletes: [Athlete], _ squads: [Squad]) -> PresentableData {
         var result: PresentableData = [:]
         for squad in squads {
             result[squad] = athletes.filter { $0.squadIDS.contains(squad.id) }
