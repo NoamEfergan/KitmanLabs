@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Squad
-struct Squad: Codable {
+struct Squad: Codable, Hashable, Identifiable {
     let createdAt: String
     let id: Int
     let name: String

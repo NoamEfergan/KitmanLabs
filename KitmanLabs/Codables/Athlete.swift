@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Athlete
-struct Athlete: Codable {
+struct Athlete: Codable, Hashable, Identifiable {
     let firstName, lastName: String
     let id: Int
     let image: ImageData
@@ -26,6 +26,6 @@ struct Athlete: Codable {
 }
 
 // MARK: - Image
-struct ImageData: Codable {
+struct ImageData: Codable, Hashable {
     let url: String
 }

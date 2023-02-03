@@ -13,7 +13,7 @@ final class NetworkService {
     func perform<T: Codable>(path: String,
                              responseType _: T.Type,
                              requestType: HTTPMethods,
-                             body: [String: String]?) async throws
+                             body: [String: String]? = nil) async throws
         -> T
     {
         guard let url: URL = .init(string: Constants.baseURL + path) else {

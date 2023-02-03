@@ -17,15 +17,17 @@ struct LoadingOverlay: ViewModifier {
         content
             .disabled(isShowing)
             .blur(radius: isShowing ? 3 : 0)
-        ProgressView(text)
-            .frame(width: UIScreen.main.bounds.size.width / 2,
-                   height: UIScreen.main.bounds.size.height / 5)
-            .background(Color.secondary.colorInvert())
-            .foregroundColor(Color.primary)
-            .cornerRadius(20)
-            .opacity(isShowing ? 1 : 0)
-            .scaleEffect(isShowing ? 1 : 0.1)
-            .animation(.easeInOut, value: isShowing)
+            .overlay {
+                ProgressView(text)
+                    .frame(width: UIScreen.main.bounds.size.width / 2,
+                           height: UIScreen.main.bounds.size.height / 5)
+                    .background(Color.secondary.colorInvert())
+                    .foregroundColor(Color.primary)
+                    .cornerRadius(20)
+                    .opacity(isShowing ? 1 : 0)
+                    .scaleEffect(isShowing ? 1 : 0.1)
+                    .animation(.easeInOut, value: isShowing)
+            }
     }
 }
 

@@ -27,6 +27,8 @@
 		050F19D0298D3AC0007D96FA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19CF298D3AC0007D96FA /* MainView.swift */; };
 		050F19D3298D3AE6007D96FA /* MainViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19D2298D3AE6007D96FA /* MainViewVM.swift */; };
 		050F19D6298D3B30007D96FA /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19D5298D3B30007D96FA /* NavigationService.swift */; };
+		050F19DC298D4FC9007D96FA /* AthleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F19DB298D4FC9007D96FA /* AthleteView.swift */; };
+		050F19DF298D5768007D96FA /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 050F19DE298D5768007D96FA /* OrderedCollections */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		050F19CF298D3AC0007D96FA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		050F19D2298D3AE6007D96FA /* MainViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewVM.swift; sourceTree = "<group>"; };
 		050F19D5298D3B30007D96FA /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
+		050F19DB298D4FC9007D96FA /* AthleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				050F19DF298D5768007D96FA /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +197,7 @@
 			children = (
 				050F19CF298D3AC0007D96FA /* MainView.swift */,
 				050F19D2298D3AE6007D96FA /* MainViewVM.swift */,
+				050F19DB298D4FC9007D96FA /* AthleteView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -222,6 +227,9 @@
 			dependencies = (
 			);
 			name = KitmanLabs;
+			packageProductDependencies = (
+				050F19DE298D5768007D96FA /* OrderedCollections */,
+			);
 			productName = KitmanLabs;
 			productReference = 050F197D298D0496007D96FA /* KitmanLabs.app */;
 			productType = "com.apple.product-type.application";
@@ -272,6 +280,9 @@
 				Base,
 			);
 			mainGroup = 050F1974298D0496007D96FA;
+			packageReferences = (
+				050F19DD298D5768007D96FA /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 050F197E298D0496007D96FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -314,6 +325,7 @@
 				050F19C4298D2827007D96FA /* LoginViewModel.swift in Sources */,
 				050F19BE298D0CAF007D96FA /* LoginResponse.swift in Sources */,
 				050F19C6298D28EB007D96FA /* LoadingOverlay.swift in Sources */,
+				050F19DC298D4FC9007D96FA /* AthleteView.swift in Sources */,
 				050F19BA298D087E007D96FA /* Color+Extensions.swift in Sources */,
 				050F19C0298D0D81007D96FA /* NetworkService.swift in Sources */,
 				050F1981298D0496007D96FA /* KitmanLabsApp.swift in Sources */,
@@ -588,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		050F19DD298D5768007D96FA /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		050F19DE298D5768007D96FA /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 050F19DD298D5768007D96FA /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 050F1975298D0496007D96FA /* Project object */;
 }
