@@ -13,6 +13,7 @@ struct LoginView: View {
     @StateObject private var loginVM = LoginViewModel()
     @EnvironmentObject private var navigationService: NavigationService
     @FocusState private var focusedField: Textfields?
+    @State private var isShowingMain: Bool = false
 
     var body: some View {
         NavigationStack(path: $navigationService.path){
@@ -40,11 +41,10 @@ struct LoginView: View {
                         focusedField = .password
                     }
                     .focused($focusedField, equals: .password)
-
                 Button("Login") {
                     focusedField = .none
                     Task {
-                        await loginVM.performLogin()
+                        isShowingMain = await loginVM.performLogin()
                     }
                 }
                 .buttonStyle(.borderedProminent)
@@ -65,6 +65,9 @@ struct LoginView: View {
             .padding()
             .onAppear {
                 focusedField = .userName
+            }
+            .navigationDestination(isPresented: $isShowingMain) {
+                MainView()
             }
         }
     }

@@ -19,22 +19,23 @@ final class LoginViewModel: ObservableObject {
     @Published var isLoading = false
 
     @MainActor
-    func performLogin() async {
+    func performLogin() async -> Bool {
         defer {
             isLoading = false
         }
         do {
             guard !userName.isEmpty else {
                 hasUsernameError = true
-                return
+                return false
             }
             guard !password.isEmpty else {
                 hasPasswordError = true
-                return
+                return false
             }
             isLoading = true
             hasPasswordError = false
             hasUsernameError = false
+            #warning("USING HARD CODED DATA")
             let response = try await networkService.perform(path: Constants.Paths.login.rawValue,
                                                             responseType: LoginResponse.self,
                                                             requestType: .POST,
@@ -43,9 +44,10 @@ final class LoginViewModel: ObservableObject {
                                                                 "password": "samplePassword",
                                                             ])
             UserDefaults.userName = response.username ?? "User"
+            return true
         } catch {
-
             print("Failed to log in with error: \(error.localizedDescription)")
+            return false
         }
     }
 }
