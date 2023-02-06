@@ -35,12 +35,12 @@ final class LoginViewModel: ObservableObject {
             isLoading = true
             hasPasswordError = false
             hasUsernameError = false
-            let response = try await networkService.perform(path: Constants.Paths.login.rawValue,
+            let response = try await networkService.perform(path: .login,
                                                             responseType: LoginResponse.self,
                                                             requestType: .POST,
                                                             body: [
-                                                                "username": "sampleUsername",
-                                                                "password": "samplePassword",
+                                                                "username": userName,
+                                                                "password": password,
                                                             ])
             UserDefaults.userName = response.username ?? "User"
             return true

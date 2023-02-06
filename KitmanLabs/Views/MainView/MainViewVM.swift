@@ -23,8 +23,8 @@ final class MainViewVM: ObservableObject {
         }
         do {
             hasError = false
-            let squads = try await networkService.perform(path: "/squads", responseType: [Squad].self, requestType: .GET)
-            let athletes = try await networkService.perform(path: "/athletes", responseType: [Athlete].self, requestType: .GET)
+            let squads = try await networkService.perform(path: .squad, responseType: [Squad].self, requestType: .GET)
+            let athletes = try await networkService.perform(path: .athletes, responseType: [Athlete].self, requestType: .GET)
             presentableData = matchAthletesWithSquads(athletes, squads)
         } catch {
             print("Failed to load squads and athletes with error: \(error.localizedDescription)")

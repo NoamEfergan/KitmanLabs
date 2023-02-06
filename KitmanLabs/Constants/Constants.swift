@@ -13,5 +13,7 @@ struct Constants {
 
     enum Paths: String {
         case login = "/session"
+        case squad = "/squads"
+        case athletes = "/athletes"
     }
 }

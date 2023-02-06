@@ -10,13 +10,13 @@ import Foundation
 // MARK: - NetworkService
 
 final class NetworkService {
-    func perform<T: Codable>(path: String,
+    func perform<T: Codable>(path: Constants.Paths,
                              responseType _: T.Type,
                              requestType: HTTPMethods,
                              body: [String: String]? = nil) async throws
         -> T
     {
-        guard let url: URL = .init(string: Constants.baseURL + path) else {
+        guard let url: URL = .init(string: Constants.baseURL + path.rawValue) else {
             throw NetworkError.invalidURL
         }
         let session = URLSession.shared
