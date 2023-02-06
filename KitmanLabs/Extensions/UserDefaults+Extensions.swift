@@ -10,21 +10,21 @@ import Foundation
 // MARK: - UserDefault
 @propertyWrapper
 struct UserDefault<Value> {
-    let key: Key
+    let key: String
     let defaultValue: Value
     var container: UserDefaults = .standard
 
     var wrappedValue: Value {
         get {
-            container.object(forKey: key.id) as? Value ?? defaultValue
+            container.object(forKey: key) as? Value ?? defaultValue
         }
         set {
             // Check whether we're dealing with an optional and remove the object if the new value is nil.
             if let optional = newValue as? AnyOptional,
                optional.isNil {
-                container.removeObject(forKey: key.id)
+                container.removeObject(forKey: key)
             } else {
-                container.set(newValue, forKey: key.id)
+                container.set(newValue, forKey: key)
             }
         }
     }
@@ -42,18 +42,23 @@ extension Optional: AnyOptional {
     public var isNil: Bool { self == nil }
 }
 
-// MARK: - UserDefault.Key
-extension UserDefault {
-    enum Key: String {
-        var id: String { UUID().uuidString }
-        case name
+// MARK: - Key
+enum Key: String {
+    var id: String { UUID().uuidString }
+    case name
+
+    func getId() -> String {
+        switch self {
+        case .name:
+            return "userName"
+        }
     }
 }
 
 // MARK: - UserDefaults
 
 extension UserDefaults {
-    @UserDefault(key: .name,
+    @UserDefault(key: Key.name.getId(),
                  defaultValue: "User")
     static var userName: String
 }
