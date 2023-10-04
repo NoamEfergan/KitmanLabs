@@ -32,12 +32,12 @@ final class NetworkService {
             throw NetworkError.invalidResponse
         }
         switch httpResponse.statusCode {
-        case 200 ... 300:
+        case 200 ... 299:
             let decoded = try JSONDecoder().decode(T.self, from: data)
             return decoded
-        case 400 ... 500:
+        case 400 ... 499:
             throw NetworkError.clientError
-        case 500 ... 600:
+        case 500 ... 599:
             throw NetworkError.serverError
         default:
             throw NetworkError.unknownError
